@@ -10,3 +10,4 @@ metadata:
   name: staff-graded
 spec:
   type: 'library'
+  owner: group:openedx-unmaintained
