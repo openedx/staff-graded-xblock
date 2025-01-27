@@ -94,7 +94,7 @@ path-py==12.5.0
     # via -r requirements/base.in
 pbr==6.1.0
     # via stevedore
-prompt-toolkit==3.0.48
+prompt-toolkit==3.0.50
     # via click-repl
 psutil==6.1.1
     # via edx-django-utils
@@ -136,7 +136,7 @@ super-csv==3.2.0
     # via edx-bulk-grades
 typing-extensions==4.12.2
     # via edx-opaque-keys
-tzdata==2024.2
+tzdata==2025.1
     # via
     #   celery
     #   kombu
@@ -157,7 +157,7 @@ web-fragments==2.2.0
     #   xblock
 webob==1.8.9
     # via xblock
-xblock==5.1.0
+xblock==5.1.1
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
