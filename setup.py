@@ -62,7 +62,7 @@ VERSION = get_version("staff_graded/__init__.py")
 
 
 setup(
-    name='staff_graded-xblock',
+    name='staff-graded-xblock',
     version=VERSION,
     description='Staff Graded XBlock',   # TODO: write a better description.
     long_description='Staff Graded XBlock',  # TODO: write a better description.
