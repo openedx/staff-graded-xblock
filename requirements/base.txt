@@ -14,7 +14,7 @@ billiard==4.2.1
     # via celery
 celery==5.4.0
     # via edx-celeryutils
-certifi==2024.12.14
+certifi==2025.1.31
     # via requests
 cffi==1.17.1
     # via pynacl
@@ -86,7 +86,7 @@ markupsafe==3.0.2
     # via
     #   mako
     #   xblock
-newrelic==10.4.0
+newrelic==10.5.0
     # via edx-django-utils
 path==17.1.0
     # via path-py
@@ -100,7 +100,7 @@ psutil==6.1.1
     # via edx-django-utils
 pycparser==2.22
     # via cffi
-pymongo==4.10.1
+pymongo==4.11
     # via edx-opaque-keys
 pynacl==1.5.0
     # via edx-django-utils
@@ -108,7 +108,7 @@ python-dateutil==2.9.0.post0
     # via
     #   celery
     #   xblock
-pytz==2024.2
+pytz==2025.1
     # via xblock
 pyyaml==6.0.2
     # via xblock
