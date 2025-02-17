@@ -47,7 +47,7 @@ six==1.17.0
     # via -r requirements/ci.in
 tox==4.24.1
     # via -r requirements/tox.txt
-virtualenv==20.29.1
+virtualenv==20.29.2
     # via
     #   -r requirements/tox.txt
     #   tox
