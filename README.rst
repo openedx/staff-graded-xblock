@@ -18,7 +18,7 @@ Localization (l10n) is adapting a program to local language and cultural habits.
 
 Use the locale directory to provide internationalized strings for your XBlock project.
 For more information on how to enable translations, visit the
-`Open edX XBlock tutorial on Internationalization <http://edx.readthedocs.org/projects/xblock-tutorial/en/latest/edx_platform/edx_lms.html>`_.
+`Open edX XBlock tutorial on Internationalization <https://docs.openedx.org/projects/xblock/en/latest/xblock-tutorial/edx_platform/edx_lms.html>`_.
 
 This cookiecutter template uses `django-statici18n <https://django-statici18n.readthedocs.io/en/latest/>`_
 to provide translations to static javascript using ``gettext``.
@@ -42,7 +42,7 @@ Mark translatable strings in python::
     # Translators: This comment will appear in the `.po` file.
     message = _("This will be marked.")
 
-See `edx-developer-guide <https://edx.readthedocs.io/projects/edx-developer-guide/en/latest/internationalization/i18n.html#python-source-code>`_
+See `edx-developer-guide <https://docs.openedx.org/en/latest/developers/references/developer_guide/internationalization/i18n.html#python-source-code>`_
 for more information.
 
 You can also use ``gettext`` to mark strings in javascript::
@@ -51,7 +51,7 @@ You can also use ``gettext`` to mark strings in javascript::
     // Translators: This comment will appear in the `.po` file.
     var message = gettext("Custom message.");
 
-See `edx-developer-guide <https://edx.readthedocs.io/projects/edx-developer-guide/en/latest/internationalization/i18n.html#javascript-files>`_
+See `edx-developer-guide <https://docs.openedx.org/en/latest/developers/references/developer_guide/internationalization/i18n.html#javascript-files>`_
 for more information.
 
 2. Run i18n tools to create Raw message catalogs
