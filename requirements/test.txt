@@ -99,6 +99,8 @@ django-waffle==4.2.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
+django-statici18n==2.6.0
+    # via -r requirements/dev.in
 djangorestframework==3.16.0
     # via
     #   -r requirements/base.txt
