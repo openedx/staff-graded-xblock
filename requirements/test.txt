@@ -71,7 +71,6 @@ coverage[toml]==7.8.0
     # via pytest-cov
 dill==0.4.0
     # via pylint
-django==4.2.20
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
