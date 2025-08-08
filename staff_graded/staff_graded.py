@@ -278,8 +278,8 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             Score(raw_earned=float, raw_possible=float)
         """
         score = get_score(self.runtime.user_id, self.location)     # pylint: disable=no-member
-        score = score or {'grade': 0, 'max_grade': 1}
-        return Score(raw_earned=score['grade'], raw_possible=score['max_grade'])
+        score = score or {'score': 0, 'max_grade': 1}
+        return Score(raw_earned=score['score'], raw_possible=score['max_grade'])
 
     def set_score(self, score):
         """

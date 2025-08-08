@@ -78,6 +78,9 @@ upgrade: $(COMMON_CONSTRAINTS_TXT)  ## update the requirements/*.txt files with 
 	pip-compile --upgrade -o requirements/tox.txt requirements/tox.in
 	pip-compile --upgrade -o requirements/ci.txt requirements/ci.in
 	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+	## Let tox control the Django
+	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
+	rm requirements/test.txt.tmp
 
 requirements: ## install development environment requirements
 	pip install -q -r requirements/pip.txt

@@ -4,3 +4,4 @@
 -r base.txt               # Core dependencies for the cookiecutter
 edx-lint
 pytest-cov
+django-statici18n
