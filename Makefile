@@ -81,7 +81,7 @@ upgrade: $(COMMON_CONSTRAINTS_TXT)  ## update the requirements/*.txt files with 
 	rm requirements/test.txt.tmp
 
 requirements: ## install development environment requirements
-	pip install -q -r requirements/pip-tools.txt
+	pip install -q -r requirements/pip_tools.txt
 	pip install -q -r requirements/dev.txt
 
 quality-python: ## Run python linters
