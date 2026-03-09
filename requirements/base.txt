@@ -8,17 +8,17 @@ amqp==5.3.1
     # via kombu
 appdirs==1.4.4
     # via fs
-asgiref==3.11.0
+asgiref==3.11.1
     # via django
 billiard==4.2.4
     # via celery
 celery==5.6.2
     # via edx-celeryutils
-certifi==2026.1.4
+certifi==2026.2.25
     # via requests
 cffi==2.0.0
     # via pynacl
-charset-normalizer==3.4.4
+charset-normalizer==3.4.5
     # via requests
 click==8.3.1
     # via
@@ -33,7 +33,7 @@ click-plugins==1.1.1.2
     # via celery
 click-repl==0.3.0
     # via celery
-django==5.2.10
+django==5.2.12
     # via
     #   -c requirements/common_constraints.txt
     #   django-crum
@@ -66,7 +66,7 @@ edx-celeryutils==1.4.0
     # via super-csv
 edx-django-utils==8.0.1
     # via super-csv
-edx-opaque-keys==3.0.0
+edx-opaque-keys==3.1.0
     # via edx-bulk-grades
 fs==2.4.16
     # via xblock
@@ -80,13 +80,13 @@ lxml==6.0.2
     # via xblock
 mako==1.3.10
     # via xblock
-markdown==3.10
+markdown==3.10.2
     # via -r requirements/base.in
 markupsafe==3.0.3
     # via
     #   mako
     #   xblock
-packaging==25.0
+packaging==26.0
     # via kombu
 path==17.1.1
     # via path-py
@@ -94,9 +94,9 @@ path-py==12.5.0
     # via -r requirements/base.in
 prompt-toolkit==3.0.52
     # via click-repl
-psutil==7.2.1
+psutil==7.2.2
     # via edx-django-utils
-pycparser==2.23
+pycparser==3.0
     # via cffi
 pymongo==4.16.0
     # via edx-opaque-keys
@@ -106,7 +106,7 @@ python-dateutil==2.9.0.post0
     # via
     #   celery
     #   xblock
-pytz==2025.2
+pytz==2026.1.post1
     # via xblock
 pyyaml==6.0.3
     # via xblock
@@ -126,7 +126,7 @@ slumber==0.7.1
     # via edx-bulk-grades
 sqlparse==0.5.5
     # via django
-stevedore==5.6.0
+stevedore==5.7.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
@@ -145,7 +145,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.14
+wcwidth==0.6.0
     # via prompt-toolkit
 web-fragments==3.1.0
     # via
