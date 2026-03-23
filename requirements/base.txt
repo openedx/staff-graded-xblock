@@ -18,7 +18,7 @@ certifi==2026.2.25
     # via requests
 cffi==2.0.0
     # via pynacl
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via requests
 click==8.3.1
     # via
@@ -56,7 +56,7 @@ django-model-utils==5.0.0
     #   super-csv
 django-waffle==5.0.0
     # via edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via super-csv
 dnspython==2.8.0
     # via pymongo
@@ -147,7 +147,7 @@ vine==5.1.0
     #   kombu
 wcwidth==0.6.0
     # via prompt-toolkit
-web-fragments==3.1.0
+web-fragments==4.0.0
     # via
     #   -r requirements/base.in
     #   xblock

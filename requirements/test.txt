@@ -36,7 +36,7 @@ cffi==2.0.0
     # via
     #   -r requirements/base.txt
     #   pynacl
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via
     #   -r requirements/base.txt
     #   requests
@@ -65,9 +65,9 @@ click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
-code-annotations==2.3.2
+code-annotations==3.0.0
     # via edx-lint
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via pytest-cov
 dill==0.4.1
     # via pylint
@@ -98,13 +98,13 @@ django-model-utils==5.0.0
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
-django-statici18n==2.6.0
+django-statici18n==2.7.1
     # via -r requirements/test.in
 django-waffle==5.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via
     #   -r requirements/base.txt
     #   super-csv
@@ -122,7 +122,7 @@ edx-django-utils==8.0.1
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-lint==5.6.0
+edx-lint==6.0.0
     # via -r requirements/test.in
 edx-opaque-keys==3.1.0
     # via
@@ -223,7 +223,7 @@ pynacl==1.6.2
     #   edx-django-utils
 pytest==9.0.2
     # via pytest-cov
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/test.in
 python-dateutil==2.9.0.post0
     # via
@@ -305,7 +305,7 @@ wcwidth==0.6.0
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
-web-fragments==3.1.0
+web-fragments==4.0.0
     # via
     #   -r requirements/base.txt
     #   xblock
