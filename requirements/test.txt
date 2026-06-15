@@ -200,7 +200,7 @@ pycparser==3.0
     #   cffi
 pygments==2.20.0
     # via pytest
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   edx-lint
     #   pylint-celery
@@ -222,7 +222,7 @@ pynacl==1.6.2
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==9.0.3
+pytest==9.1.0
     # via pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.in
@@ -312,7 +312,7 @@ webob==1.8.10
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==6.2.0
+xblock==6.3.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:

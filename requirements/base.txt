@@ -151,7 +151,7 @@ wcwidth==0.8.1
     # via prompt-toolkit
 webob==1.8.10
     # via xblock
-xblock==6.2.0
+xblock==6.3.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:

@@ -12,11 +12,11 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-distlib==0.4.2
+distlib==0.4.3
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-filelock==3.29.3
+filelock==3.29.4
     # via
     #   -r requirements/tox.txt
     #   python-discovery
@@ -54,7 +54,7 @@ tomli-w==1.2.0
     #   tox
 tox==4.55.1
     # via -r requirements/tox.txt
-virtualenv==21.4.3
+virtualenv==21.5.0
     # via
     #   -r requirements/tox.txt
     #   tox
