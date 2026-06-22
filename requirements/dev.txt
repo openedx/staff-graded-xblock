@@ -34,7 +34,7 @@ celery==5.6.3
     # via
     #   -r requirements/base.txt
     #   edx-celeryutils
-certifi==2026.5.20
+certifi==2026.6.17
     # via
     #   -r requirements/base.txt
     #   requests
@@ -78,11 +78,11 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.14.1
+coverage[toml]==7.14.2
     # via pytest-cov
 dill==0.4.1
     # via pylint
-distlib==0.4.2
+distlib==0.4.3
     # via
     #   -r requirements/tox.txt
     #   virtualenv
@@ -152,7 +152,7 @@ edx-opaque-keys==4.0.0
     #   -r requirements/base.txt
     #   edx-bulk-grades
     #   xblock
-filelock==3.29.3
+filelock==3.29.4
     # via
     #   -r requirements/tox.txt
     #   python-discovery
@@ -254,7 +254,7 @@ pycparser==3.0
     #   cffi
 pygments==2.20.0
     # via pytest
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   edx-lint
     #   pylint-celery
@@ -284,7 +284,7 @@ pyproject-hooks==1.2.0
     # via
     #   build
     #   pip-tools
-pytest==9.0.3
+pytest==9.1.1
     # via pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.in
@@ -367,7 +367,7 @@ tzdata==2026.2
     # via
     #   -r requirements/base.txt
     #   kombu
-tzlocal==5.3.1
+tzlocal==5.4.3
     # via
     #   -r requirements/base.txt
     #   celery
@@ -381,7 +381,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==21.4.3
+virtualenv==21.5.1
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -395,7 +395,7 @@ webob==1.8.10
     #   xblock
 wheel==0.47.0
     # via pip-tools
-xblock==6.2.0
+xblock==6.3.0
     # via
     #   -r requirements/base.in
     #   -r requirements/base.txt
