@@ -14,13 +14,13 @@ billiard==4.2.4
     # via celery
 celery==5.6.3
     # via edx-celeryutils
-certifi==2026.5.20
+certifi==2026.6.17
     # via requests
 cffi==2.0.0
     # via pynacl
 charset-normalizer==3.4.7
     # via requests
-click==8.4.1
+click==8.4.2
     # via
     #   celery
     #   click-didyoumean
@@ -138,7 +138,7 @@ typing-extensions==4.15.0
     # via edx-opaque-keys
 tzdata==2026.2
     # via kombu
-tzlocal==5.3.1
+tzlocal==5.4.3
     # via celery
 urllib3==2.7.0
     # via requests
@@ -151,7 +151,7 @@ wcwidth==0.8.1
     # via prompt-toolkit
 webob==1.8.10
     # via xblock
-xblock==6.2.0
+xblock==6.3.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:

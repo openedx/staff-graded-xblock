@@ -28,7 +28,7 @@ celery==5.6.3
     # via
     #   -r requirements/base.txt
     #   edx-celeryutils
-certifi==2026.5.20
+certifi==2026.6.17
     # via
     #   -r requirements/base.txt
     #   requests
@@ -40,7 +40,7 @@ charset-normalizer==3.4.7
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.4.1
+click==8.4.2
     # via
     #   -r requirements/base.txt
     #   celery
@@ -67,7 +67,7 @@ click-repl==0.3.0
     #   celery
 code-annotations==3.0.0
     # via edx-lint
-coverage[toml]==7.14.1
+coverage[toml]==7.14.3
     # via pytest-cov
 dill==0.4.1
     # via pylint
@@ -200,7 +200,7 @@ pycparser==3.0
     #   cffi
 pygments==2.20.0
     # via pytest
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   edx-lint
     #   pylint-celery
@@ -222,7 +222,7 @@ pynacl==1.6.2
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==9.0.3
+pytest==9.1.1
     # via pytest-cov
 pytest-cov==7.1.0
     # via -r requirements/test.in
@@ -290,7 +290,7 @@ tzdata==2026.2
     # via
     #   -r requirements/base.txt
     #   kombu
-tzlocal==5.3.1
+tzlocal==5.4.3
     # via
     #   -r requirements/base.txt
     #   celery
@@ -312,7 +312,7 @@ webob==1.8.10
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==6.2.0
+xblock==6.3.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
