@@ -1,7 +1,0 @@
-# Core requirements for using this package
--c constraints.txt
-
-edx-bulk-grades
-markdown
-path.py
-XBlock
