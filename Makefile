@@ -4,7 +4,7 @@
 		quality-python test-js test-python install_transifex_client
 
 REPO_NAME := staff_graded-xblock
-PACKAGE_NAME := staff_graded
+PACKAGE_NAME := src/staff_graded
 EXTRACT_DIR := $(PACKAGE_NAME)/locale/en/LC_MESSAGES
 EXTRACTED_DJANGO := $(EXTRACT_DIR)/django-partial.po
 EXTRACTED_DJANGOJS := $(EXTRACT_DIR)/djangojs-partial.po
@@ -69,7 +69,7 @@ requirements: ## install development environment requirements
 	uv sync --group dev
 
 quality-python: ## Run python linters
-	pylint --rcfile=pylintrc staff_graded
+	pylint --rcfile=pylintrc src/staff_graded
 
 quality: quality-python ## Run linters
 

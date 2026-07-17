@@ -39,6 +39,7 @@ version_scheme = "only-version"
 local_scheme = "no-local-version"
 
 [tool.setuptools.packages.find]
+where = ["src"]
 namespaces = false
 
 [tool.setuptools.package-data]
