@@ -2,7 +2,8 @@ name: Semantic Release
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   run_tests:
@@ -13,60 +14,58 @@ jobs:
 
   release:
     needs: run_tests
-    runs-on: ubuntu-latest
     if: github.ref_name == 'master'
+    runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.workflow }}-release-${{ github.ref_name }}
+      group: ${{ github.workflow }}-release
       cancel-in-progress: false
 
     permissions:
       contents: write
 
     steps:
-      - name: Setup | Checkout Repository on Release Branch
+      - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           ref: ${{ github.ref_name }}
 
-      - name: Setup | Force release branch to be at workflow sha
+      - name: Reset to triggered commit
         run: git reset --hard ${{ github.sha }}
 
-      - name: Action | Semantic Version Release
+      - name: Python Semantic Release
         id: release
         uses: python-semantic-release/python-semantic-release@350c48fcb3ffcdfd2e0a235206bc2ecea6b69df0 # v10.5.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_committer_name: "github-actions"
-          git_committer_email: "actions@users.noreply.github.com"
+          git_committer_name: "github-actions[bot]"
+          git_committer_email: "github-actions[bot]@users.noreply.github.com"
           changelog: "false"
 
-      - name: Upload | Distribution Artifacts
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - name: Upload dist artifacts
         if: steps.release.outputs.released == 'true'
+        uses: actions/upload-artifact@v4
         with:
-          name: distribution-artifacts
-          path: dist
-          if-no-files-found: error
+          name: dist
+          path: dist/
 
     outputs:
-      released: ${{ steps.release.outputs.released || 'false' }}
+      released: ${{ steps.release.outputs.released }}
       version: ${{ steps.release.outputs.version }}
 
   publish_to_pypi:
     needs: release
-    runs-on: ubuntu-latest
     if: needs.release.outputs.released == 'true'
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
       id-token: write
 
     steps:
-      - name: Setup | Download Build Artifacts
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+      - name: Download dist artifacts
+        uses: actions/download-artifact@v4
         with:
-          name: distribution-artifacts
-          path: dist
+          name: dist
+          path: dist/
 
-      - name: Publish to PyPi
+      - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
