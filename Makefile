@@ -4,7 +4,7 @@
 		quality-python test-js test-python install_transifex_client
 
 REPO_NAME := staff_graded-xblock
-PACKAGE_NAME := staff_graded
+PACKAGE_NAME := src/staff_graded
 EXTRACT_DIR := $(PACKAGE_NAME)/locale/en/LC_MESSAGES
 EXTRACTED_DJANGO := $(EXTRACT_DIR)/django-partial.po
 EXTRACTED_DJANGOJS := $(EXTRACT_DIR)/djangojs-partial.po
@@ -61,31 +61,15 @@ push_translations: extract_translations ## push translations to transifex
 symlink_translations:
 	if [ ! -d "$(TRANSLATIONS_DIR)" ]; then ln -s locale/ $(TRANSLATIONS_DIR); fi
 
-COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
-.PHONY: $(COMMON_CONSTRAINTS_TXT)
-$(COMMON_CONSTRAINTS_TXT):
-	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
-
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: $(COMMON_CONSTRAINTS_TXT)  ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -q -r requirements/pip_tools.txt
-	pip-compile --upgrade --allow-unsafe -o requirements/pip_tools.txt requirements/pip_tools.in
-	pip install -qr requirements/pip_tools.txt
-	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --upgrade -o requirements/tox.txt requirements/tox.in
-	pip-compile --upgrade -o requirements/ci.txt requirements/ci.in
-	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
-	## Let tox control the Django
-	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
-	rm requirements/test.txt.tmp
+upgrade: ## update uv.lock and regenerate uv constraints
+	uv lock --upgrade
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
 
 requirements: ## install development environment requirements
-	pip install -q -r requirements/pip_tools.txt
-	pip install -q -r requirements/dev.txt
+	uv sync --group dev
 
 quality-python: ## Run python linters
-	pylint --rcfile=pylintrc staff_graded setup.py
+	pylint --rcfile=pylintrc src/staff_graded
 
 quality: quality-python ## Run linters
 
