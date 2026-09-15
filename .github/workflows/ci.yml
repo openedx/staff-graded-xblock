@@ -10,7 +10,7 @@ on:
 
 jobs:
   run_tests:
-    name: ${{ matrix.toxenv }}
+    name: Tests
     runs-on: ${{ matrix.os }}
     permissions:
       contents: read

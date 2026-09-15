@@ -69,12 +69,12 @@ requirements: ## install development environment requirements
 	uv sync --group dev
 
 quality-python: ## Run python linters
-	pylint --rcfile=pylintrc src/staff_graded
+	uv run pylint --rcfile=pylintrc src/staff_graded
 
 quality: quality-python ## Run linters
 
 test-python: clean ## run tests using pytest and generate coverage report
-	-pytest
+	-uv run pytest
 
 install-js: ## install JavaScript dependencies
 	npm install
