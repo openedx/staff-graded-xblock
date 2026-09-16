@@ -62,8 +62,8 @@ symlink_translations:
 	if [ ! -d "$(TRANSLATIONS_DIR)" ]; then ln -s locale/ $(TRANSLATIONS_DIR); fi
 
 upgrade: ## update uv.lock and regenerate uv constraints
-	uv lock --upgrade
 	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
 requirements: ## install development environment requirements
 	uv sync --group dev
