@@ -7,7 +7,7 @@ name = "staff-graded-xblock"
 dynamic = ["version"]
 description = "Staff Graded XBlock"
 readme = "README.rst"
-license = "AGPL-3.0"
+license = "AGPL-3.0-or-later"
 license-files = ["LICENSE"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -41,12 +41,14 @@ local_scheme = "no-local-version"
 [tool.setuptools.packages.find]
 where = ["src"]
 namespaces = false
+exclude = ["staff_graded.translations"]
 
 [tool.setuptools.package-data]
 staff_graded = ["static/**/*", "public/**/*"]
 
 [tool.setuptools.exclude-package-data]
 "*" = ["tests*", "*.tests*", "spec*", "*.spec*"]
+staff_graded = ["translations"]
 
 [tool.coverage.run]
 branch = true

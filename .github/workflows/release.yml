@@ -6,16 +6,20 @@ on:
       - master
 
 jobs:
-  run_tests:
+  # The same aggregate a pull request has to pass, so the release runs exactly
+  # the checks that were required to merge -- and picks up any package added to
+  # ci.yml later without needing a change here.
+  run_ci:
     uses: ./.github/workflows/ci.yml
-    secrets: inherit
-    permissions:
-      contents: read
 
   release:
-    needs: run_tests
-    if: github.ref_name == 'master'
+    # Every package this workflow publishes has to build before we tag
+    # anything. The GitHub release and the PyPI uploads cannot be taken back,
+    # so a package that only fails to build in its publish job would leave the
+    # release half-finished.
+    needs: [run_ci]
     runs-on: ubuntu-latest
+    if: github.ref_name == 'master'
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.ref_name }}
       cancel-in-progress: false

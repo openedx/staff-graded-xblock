@@ -10,7 +10,7 @@ on:
 
 jobs:
   run_tests:
-    name: Tests
+    name: ${{ matrix.toxenv }}
     runs-on: ${{ matrix.os }}
     permissions:
       contents: read
@@ -29,7 +29,7 @@ jobs:
         enable-cache: true
 
     - name: Install CI dependencies
-      run: uv sync --group ci
+      run: uv sync --group ci --locked
 
     - name: Run Tests
-      run: uv run tox -e ${{ matrix.toxenv }}
+      run: uv run --locked tox -e ${{ matrix.toxenv }}
