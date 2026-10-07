@@ -6,55 +6,54 @@
 #
 cachetools==7.1.4
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 colorama==0.4.6
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 distlib==0.4.2
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   virtualenv
 filelock==3.29.3
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   python-discovery
     #   tox
     #   virtualenv
 packaging==26.2
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   pyproject-api
     #   tox
 platformdirs==4.10.0
     # via
-    #   -r requirements/tox.txt
-    #   python-discovery
+    #   -r tox.txt
     #   tox
     #   virtualenv
 pluggy==1.6.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 pyproject-api==1.10.1
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
-python-discovery==1.4.2
+python-discovery==1.6.1
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
     #   virtualenv
 six==1.17.0
-    # via -r requirements/ci.in
+    # via -r ci.in
 tomli-w==1.2.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 tox==4.55.1
-    # via -r requirements/tox.txt
-virtualenv==21.4.3
+    # via -r tox.txt
+virtualenv==21.7.13
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
