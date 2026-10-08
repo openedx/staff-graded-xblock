@@ -7,7 +7,7 @@ name = "staff-graded-xblock"
 dynamic = ["version"]
 description = "Staff Graded XBlock"
 readme = "README.rst"
-license = "AGPL-3.0-or-later"
+license = "AGPL-3.0-only"
 license-files = ["LICENSE"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
