@@ -35,7 +35,7 @@ click-repl==0.3.0
     # via celery
 django==5.2.15
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c common_constraints.txt
     #   django-crum
     #   django-model-utils
     #   django-waffle
@@ -61,7 +61,7 @@ djangorestframework==3.17.1
 dnspython==2.8.0
     # via pymongo
 edx-bulk-grades==2.0.0
-    # via -r requirements/base.in
+    # via -r base.in
 edx-celeryutils==2.0.0
     # via super-csv
 edx-django-utils==8.0.1
@@ -83,7 +83,7 @@ lxml==6.1.1
 mako==1.3.12
     # via xblock
 markdown==3.10.2
-    # via -r requirements/base.in
+    # via -r base.in
 markupsafe==3.0.3
     # via
     #   mako
@@ -93,7 +93,7 @@ packaging==26.2
 path==17.1.1
     # via path-py
 path-py==12.5.0
-    # via -r requirements/base.in
+    # via -r base.in
 prompt-toolkit==3.0.52
     # via click-repl
 psutil==7.2.2
@@ -149,10 +149,10 @@ vine==5.1.0
     #   kombu
 wcwidth==0.8.1
     # via prompt-toolkit
-webob==1.8.10
+webob==1.8.11
     # via xblock
 xblock==6.2.0
-    # via -r requirements/base.in
+    # via -r base.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
