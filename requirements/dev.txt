@@ -223,7 +223,7 @@ path-py==12.5.0
     # via
     #   -r requirements/base.in
     #   -r requirements/base.txt
-pip-tools==7.5.3
+pip-tools==7.6.2
     # via -r requirements/pip_tools.in
 platformdirs==4.10.0
     # via
