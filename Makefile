@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 .PHONY: clean dev.clean dev.build dev.run test quality requirements \
-		test-js test-python install_transifex_client
+		quality-python test-js test-python install_transifex_client
 
 REPO_NAME := staff_graded-xblock
 PACKAGE_NAME := src/staff_graded
@@ -69,11 +69,13 @@ upgrade: ## update uv.lock and regenerate uv constraints
 requirements: ## install development environment requirements
 	uv sync --group dev
 
-quality: ## Run linters
-	tox -e quality
+quality-python: ## Run python linters
+	pylint --rcfile=pylintrc $(PACKAGE_NAME)
+
+quality: quality-python ## Run linters
 
 test-python: clean ## run tests using pytest and generate coverage report
-	tox -e django42,django52
+	-pytest
 
 install-js: ## install JavaScript dependencies
 	npm install

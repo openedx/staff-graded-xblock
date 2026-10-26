@@ -41,7 +41,10 @@ local_scheme = "no-local-version"
 [tool.setuptools.packages.find]
 where = ["src"]
 namespaces = false
-exclude = ["staff_graded.translations"]
+include = ["staff_graded"]
+
+[tool.setuptools]
+include-package-data = false
 
 [tool.setuptools.package-data]
 staff_graded = ["static/**/*", "public/**/*"]
