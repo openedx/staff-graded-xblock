@@ -122,7 +122,10 @@ conflicts = [
         {group = "django42"},
     ],
 ]
-constraint-dependencies = []
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+]
 
 [tool.semantic_release]
 build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
